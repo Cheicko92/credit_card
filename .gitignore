@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.hypothesis/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+.env
+*.pem
+*.key
+# Données volumineuses : à télécharger depuis Kaggle, jamais versionnées
+data/creditcard.csv
+# Artefacts régénérables
+reports/pipeline.joblib

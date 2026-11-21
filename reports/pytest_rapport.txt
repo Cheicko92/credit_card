@@ -1,0 +1,27 @@
+........................................................................ [ 66%]
+...........................x.........                                    [100%]
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.13.18-final-0 _______________
+
+Name                   Stmts   Miss  Cover   Missing
+----------------------------------------------------
+app/__init__.py            1      0   100%
+app/data_source.py        38      1    97%   70
+app/evaluation.py         11      0   100%
+app/prediction.py         20      1    95%   16
+app/preprocessing.py      74      1    99%   70
+app/training.py           53      0   100%
+----------------------------------------------------
+TOTAL                    197      3    98%
+Coverage XML written to file reports/coverage.xml
+=========================== short test summary info ============================
+XFAIL tests/test_robustness.py::test_extreme_amount_should_not_change_alert_volume_massively - ANOMALIE A-03 (ouverte) : un Amount hors plage sature la régression logistique (avalanche de fausses alertes OU masquage total des fraudes selon le signe du coefficient). Garde-fou de plausibilité (plafonnement + alerte) à implémenter.
+108 passed, 3 deselected, 1 xfailed in 4.07s
+...                                                                      [100%]
+3 passed, 109 deselected in 0.82s
+
+----------------------------------------------------------------------
+Exécution locale (Windows, Python 3.14.7, data/creditcard.csv présent),
+résumé transmis par l'étudiant :
+XFAIL tests/test_robustness.py::test_extreme_amount_should_not_change_alert_volume_massively - ANOMALIE A-03 (ouverte)
+108 passed, 3 deselected, 1 xfailed in 21.48s

@@ -1,0 +1,287 @@
+{
+  "info": {
+    "source": "creditcard.csv (Kaggle)",
+    "n_total": 284807,
+    "n_fraud": 492,
+    "fraud_rate_%": 0.1727485630620034,
+    "split": {
+      "train": [
+        170883,
+        295
+      ],
+      "val": [
+        56962,
+        99
+      ],
+      "test": [
+        56962,
+        98
+      ]
+    }
+  },
+  "env": {
+    "code_version": "1.0.0",
+    "python": "3.14.7",
+    "sklearn": "1.9.1",
+    "numpy": "2.5.5",
+    "pandas": "3.1.1",
+    "seed": 42
+  },
+  "results": {
+    "Régression logistique": {
+      "train": {
+        "tn": 170406,
+        "fp": 182,
+        "fn": 47,
+        "tp": 248,
+        "accuracy": 0.9986599018041584,
+        "precision": 0.5767441860465117,
+        "recall": 0.8406779661016949,
+        "f1": 0.6841379310344827,
+        "roc_auc": 0.9926001610382116,
+        "pr_auc": 0.7728228126905472,
+        "fpr": 0.0010668980233076184,
+        "fnr": 0.15932203389830507
+      },
+      "val": {
+        "tn": 56794,
+        "fp": 69,
+        "fn": 19,
+        "tp": 80,
+        "accuracy": 0.9984551104244935,
+        "precision": 0.5369127516778524,
+        "recall": 0.8080808080808081,
+        "f1": 0.6451612903225806,
+        "roc_auc": 0.9747276681486976,
+        "pr_auc": 0.6807113141715643,
+        "fpr": 0.0012134428362907338,
+        "fnr": 0.1919191919191919
+      },
+      "test": {
+        "tn": 56793,
+        "fp": 71,
+        "fn": 13,
+        "tp": 85,
+        "accuracy": 0.9985253326779256,
+        "precision": 0.5448717948717948,
+        "recall": 0.8673469387755102,
+        "f1": 0.6692913385826772,
+        "roc_auc": 0.9725522155260529,
+        "pr_auc": 0.7178737904575203,
+        "fpr": 0.0012485931344963421,
+        "fnr": 0.1326530612244898
+      },
+      "test_seuil_0.5": {
+        "tn": 55494,
+        "fp": 1370,
+        "fn": 8,
+        "tp": 90,
+        "accuracy": 0.9758084336926371,
+        "precision": 0.06164383561643835,
+        "recall": 0.9183673469387755,
+        "f1": 0.11553273427471117,
+        "roc_auc": 0.9725522155260529,
+        "pr_auc": 0.7178737904575203,
+        "fpr": 0.024092571750140686,
+        "fnr": 0.08163265306122448
+      },
+      "threshold": 0.9877888691485672,
+      "test_recall_ci95": [
+        0.7861693677036048,
+        0.9208108839813649
+      ],
+      "test_fpr_ci95": [
+        0.0009900932698789938,
+        0.0015744774241492456
+      ]
+    },
+    "Arbre de décision": {
+      "train": {
+        "tn": 169760,
+        "fp": 828,
+        "fn": 19,
+        "tp": 276,
+        "accuracy": 0.9950433922625422,
+        "precision": 0.25,
+        "recall": 0.9355932203389831,
+        "f1": 0.3945675482487491,
+        "roc_auc": 0.9966781000352519,
+        "pr_auc": 0.8008410913885331,
+        "fpr": 0.004853799798344549,
+        "fnr": 0.06440677966101695
+      },
+      "val": {
+        "tn": 56613,
+        "fp": 250,
+        "fn": 19,
+        "tp": 80,
+        "accuracy": 0.9952775534566904,
+        "precision": 0.24242424242424243,
+        "recall": 0.8080808080808081,
+        "f1": 0.372960372960373,
+        "roc_auc": 0.9047481124666641,
+        "pr_auc": 0.6681135490690395,
+        "fpr": 0.004396532015546137,
+        "fnr": 0.1919191919191919
+      },
+      "test": {
+        "tn": 56571,
+        "fp": 293,
+        "fn": 13,
+        "tp": 85,
+        "accuracy": 0.9946279976124434,
+        "precision": 0.22486772486772486,
+        "recall": 0.8673469387755102,
+        "f1": 0.35714285714285715,
+        "roc_auc": 0.9248997608328643,
+        "pr_auc": 0.706307867324424,
+        "fpr": 0.005152644907146876,
+        "fnr": 0.1326530612244898
+      },
+      "test_seuil_0.5": {
+        "tn": 56384,
+        "fp": 480,
+        "fn": 13,
+        "tp": 85,
+        "accuracy": 0.9913451072644921,
+        "precision": 0.1504424778761062,
+        "recall": 0.8673469387755102,
+        "f1": 0.2564102564102564,
+        "roc_auc": 0.9248997608328643,
+        "pr_auc": 0.706307867324424,
+        "fpr": 0.008441193021947102,
+        "fnr": 0.1326530612244898
+      },
+      "threshold": 0.9396596202538662,
+      "test_recall_ci95": [
+        0.7861693677036048,
+        0.9208108839813649
+      ],
+      "test_fpr_ci95": [
+        0.004596665912440208,
+        0.005775480865150871
+      ]
+    }
+  },
+  "naive_never_fraud": {
+    "tn": 56864,
+    "fp": 0,
+    "fn": 98,
+    "tp": 0,
+    "accuracy": 0.9982795547909132,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "roc_auc": 0.5,
+    "pr_auc": 0.0017204452090867595,
+    "fpr": 0.0,
+    "fnr": 1.0
+  },
+  "selected_model": "Régression logistique",
+  "reload_max_proba_gap": 0.0,
+  "robustness_base": {
+    "tn": 56793,
+    "fp": 71,
+    "fn": 13,
+    "tp": 85,
+    "accuracy": 0.9985253326779256,
+    "precision": 0.5448717948717948,
+    "recall": 0.8673469387755102,
+    "f1": 0.6692913385826772,
+    "roc_auc": 0.9725522155260529,
+    "pr_auc": 0.7178737904575203,
+    "fpr": 0.0012485931344963421,
+    "fnr": 0.1326530612244898
+  },
+  "robustness": [
+    {
+      "scenario": "Bruit gaussien sigma=0.05 sur V1-V28",
+      "attendu": "sensibilité mesurée",
+      "delta_proba_moy": 0.007666754997989169,
+      "changement_classe_%": 0.012288894350619712,
+      "recall": 0.8673469387755102,
+      "precision": 0.5279503105590062,
+      "fpr": 0.0013365222284749578
+    },
+    {
+      "scenario": "Bruit gaussien sigma=0.1 sur V1-V28",
+      "attendu": "sensibilité mesurée",
+      "delta_proba_moy": 0.015641584283907602,
+      "changement_classe_%": 0.01755556335802816,
+      "recall": 0.8571428571428571,
+      "precision": 0.5185185185185185,
+      "fpr": 0.0013716938660664041
+    },
+    {
+      "scenario": "Bruit gaussien sigma=0.3 sur V1-V28",
+      "attendu": "sensibilité mesurée",
+      "delta_proba_moy": 0.05185428694511252,
+      "changement_classe_%": 0.10708893648397178,
+      "recall": 0.8775510204081632,
+      "precision": 0.4195121951219512,
+      "fpr": 0.0020927124366910523
+    },
+    {
+      "scenario": "Amount +5 %",
+      "attendu": "variation faible",
+      "delta_proba_moy": 0.0032586353004063606,
+      "changement_classe_%": 0.047400021066676026,
+      "recall": 0.8673469387755102,
+      "precision": 0.4644808743169399,
+      "fpr": 0.0017234102419808666
+    },
+    {
+      "scenario": "Amount extrême (1e7)",
+      "attendu": "traité sans erreur, proba valide",
+      "delta_proba_moy": 0.9338357675783631,
+      "changement_classe_%": 99.72613321161477,
+      "recall": 1.0,
+      "precision": 0.0017204452090867595,
+      "fpr": 1.0
+    },
+    {
+      "scenario": "5 % de NaN dans V1-V28 (imputation médiane)",
+      "attendu": "traité (imputé)",
+      "delta_proba_moy": 0.022881562527901227,
+      "changement_classe_%": 0.12640005617780276,
+      "recall": 0.8673469387755102,
+      "precision": 0.38990825688073394,
+      "fpr": 0.0023389138998311763
+    },
+    {
+      "scenario": "Décalage de distribution (+1 sur V1-V28)",
+      "attendu": "alerte de dérive",
+      "delta_proba_moy": 0.0635654915934544,
+      "changement_classe_%": 0.08602226045433797,
+      "recall": 0.8367346938775511,
+      "precision": 0.7663551401869159,
+      "fpr": 0.00043964546989307823
+    }
+  ],
+  "rejection": {
+    "Valeur infinie": "rejeté (DataValidationError)",
+    "Colonne manquante": "rejeté (DataValidationError)",
+    "Type texte": "rejeté (DataValidationError)"
+  },
+  "performance": {
+    "latence_unitaire_moy_ms": 8.86231133597903,
+    "latence_unitaire_p50_ms": 8.80369998048991,
+    "latence_unitaire_p95_ms": 9.25857494585216,
+    "debit_lot_1000_pred_par_s": 97970.9722071081,
+    "taille_modele_ko": 3.1943359375,
+    "memoire_rss_mo": 361.807872,
+    "protocole": "300 prédictions unitaires après 20 d'échauffement ; 20 lots de 1000 ; time.perf_counter ; machine unique, 1 processus"
+  },
+  "psi_shifted": {
+    "Amount": 0.4069642495828034,
+    "V1": 1.1143939654849704,
+    "V3": 0.00010037583350854323,
+    "V10": 0.00022974214578062993
+  },
+  "psi_same_distribution": {
+    "Amount": 7.109973884829204e-05,
+    "V1": 0.00011111501097377656,
+    "V3": 0.00010037583350854323,
+    "V10": 0.00022974214578062993
+  }
+}
